@@ -1,0 +1,6 @@
+int i = 10;
+while (i < 5) {
+//i++; (instead of i++, we should put i--)
+i--;
+println (i);
+}

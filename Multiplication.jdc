@@ -1,0 +1,13 @@
+println (" Please enter the first number ");
+String s1=readLine();
+int num1=Integer.parseInt(s1);
+println (" Please enter the second number ");
+String s2=readLine();
+int num2 =Integer.parseInt(s2);
+int answer=0;
+
+for (int i=1; i<=num2;i++) {
+	answer+=num1;
+}
+
+println (" The product of numbers is "+answer);

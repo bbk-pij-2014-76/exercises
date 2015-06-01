@@ -1,0 +1,42 @@
+//goingUpAndDown
+String s=readLine();
+int pos_no=Integer.parseInt(s);
+int prevNo=pos_no;
+int previousNo=pos_no;
+boolean isEqualToPrev=true;
+while (pos_no!=-1) {
+	while (pos_no!=-1) {
+		if (isEqualToPrev && (pos_no != prevNo) && (pos_no != previousNo)) {
+			isEqualToPrev = false;
+		}
+		prevNo++;
+		previousNo--;
+		s=readLine();
+		pos_no=Integer.parseInt(s);
+}
+	/*if (isEqualToPrev==false) {
+		prevNo++;
+		previousNo--;
+	}
+	else if (pos_no==prevNo || pos_no==previousNo) {
+		isEqualToPrev=true;
+		prevNo++;
+		previousNo--;
+	}
+	else	{
+		isEqualToPrev=false;
+		prevNo++;
+		previousNo--;
+	}
+	s=readLine();
+	pos_no=Integer.parseInt(s);*/
+}
+
+if (isEqualToPrev) {
+	println ("Yes");
+}
+else {
+	println ("No");
+}
+	
+	

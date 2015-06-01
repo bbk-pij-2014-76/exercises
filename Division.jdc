@@ -1,0 +1,16 @@
+println ( " Enter a number ");
+String s1=readLine();
+println (" Enter another number ");
+String s2=readLine();
+int number1=Integer.parseInt(s1);
+int number2=Integer.parseInt(s2);
+int answer=1;
+
+while  ((number1-number2)>= number2) {
+	answer++;
+	number1=number1-number2;
+}
+
+println ( "The answer is "+answer);
+println ( "The the remaider is "+(number1-number2));
+	

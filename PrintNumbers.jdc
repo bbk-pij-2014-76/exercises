@@ -1,0 +1,45 @@
+
+Numbers a = new Numbers();
+
+println (" Please enter a number ");
+String s = readLine();
+a.n = Integer.parseInt (s);
+
+//a.printLine (a.n);
+
+String str = a.doggyMethod (a.n);
+println (str);
+
+//a.printNumbers(a.n-2);
+//a.printNumbers(a.n-3);
+//a.printLine(a.n);
+
+class Numbers
+{
+
+	public int n;
+
+	void printNumbers(int n) 
+	{
+ 		if (n <= 0) 
+ 		{
+    			return;
+		}
+	}
+
+	void printLine ( int n )
+	{
+		println (n);
+	}
+	
+	String doggyMethod(int n) 
+	{
+		
+		if (n <= 0) 
+		{
+			return "";
+		} 
+		else
+			return doggyMethod(n-3) + n + doggyMethod(n-2);
+	}
+}

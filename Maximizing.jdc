@@ -1,0 +1,16 @@
+println (" Please enter a positive number ( end with -1) ");
+String s=readLine();
+int num=Integer.parseInt(s);
+int largest=0;
+
+while (num!=-1) {
+	if (num>largest) {
+		largest=num;
+	}
+		s=readLine();
+		num=Integer.parseInt(s);
+		
+	
+}
+
+println (" The largest number is "+largest);

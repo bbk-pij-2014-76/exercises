@@ -1,0 +1,16 @@
+println ( " Please enter a binary number " );
+String b = readLine ();
+int binaryNumber = Integer.parseInt ( b );
+println ( binaryNumber );
+println (b.length());
+double total = 0;
+
+for ( int i = 0  ; i <= b.length() ; i ++ ) {
+	if ( b.charAt ( i ) == 1 ) {
+		total = total + Math.pow ( 2 , i );
+	}
+}
+
+println ( " The decimal equivalent is " + total );
+		
+		

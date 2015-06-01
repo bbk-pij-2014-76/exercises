@@ -1,0 +1,14 @@
+println (" Please enter a total amount borrowed ");
+String c = readLine();
+double cost = Double.parseDouble ( c );
+println ( " Please enter the number of year to pay " ); 
+String y = readLine();
+double years = Double.parseDouble ( y );
+println ( " Please enter the interest rate ");
+String r = readLine();
+double rate = Double.parseDouble ( r );
+
+double totalAmount = cost * (1 + rate / 100);
+
+println ( " the total amount repaid is " + totalAmount );
+

@@ -1,0 +1,11 @@
+println (" Please enter the cost of purchase ");
+String str=readLine();
+double costOfPurchase=Double.parseDouble(str);
+println (" Please enter the amount of money paid ");
+String str1=readLine();
+double moneyPaid=Double.parseDouble(str1);
+double change=moneyPaid-costOfPurchase;
+println ("The remaining change is "+change);
+if (change%5==0) {
+	println (" The change is "+(change/5)+"note of £5");
+}

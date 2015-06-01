@@ -1,0 +1,8 @@
+println (" Please enter a text ");
+String str=readLine();
+String str1 = "";
+for (int i = str.length()-1;	 i>=0;  	i--) {
+	str1 	=	str1 + str.charAt(i);
+}
+
+println (str+str1);

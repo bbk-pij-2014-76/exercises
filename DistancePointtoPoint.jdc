@@ -1,0 +1,83 @@
+//import java.lang.Math;
+
+Point p1 = new Point();
+Point p2 = new Point();
+Point p3 = new Point();
+println (" Please enter the x coordinate of the first point ");
+String sfx = readLine();
+p1.x = Double.parseDouble(sfx);
+println (" Please enter the y coordinate of the first point ");
+String sfy = readLine();
+p1.y = Double.parseDouble(sfy);
+
+print ("P1 = ( " + p1.x + ", ");
+println (p1.y + " )");
+
+println (" Please enter the x coordinate of the second point ");
+String ssx = readLine();
+p2.x = Double.parseDouble(ssx);
+println (" Please enter the y coordinate of the second point ");
+String ssy = readLine();
+p2.y = Double.parseDouble(ssy);
+
+print ("P2 = ( " + p2.x + ", ");
+println (p2.y + " )");
+
+println (" Please enter the x coordinate of the third point ");
+String stx = readLine();
+p3.x = Double.parseDouble(stx);
+println (" Please enter the y coordinate of the third point ");
+String sty = readLine();
+p3.y = Double.parseDouble(ssy);
+
+print ("P3 = ( " + p3.x + ", ");
+println (p3.y + " )");
+
+double distanceP1P2 = 0;
+double distanceP2P3 = 0;
+double distanceP3P1 = 0;
+double shortestDistance=0;
+
+distanceP1P2 = calculateDistance ( p1 , p2 );
+distanceP2P3 = calculateDistance ( p2 , p3 );
+distanceP3P1 = calculateDistance ( p3 , p1 );
+
+println ( " The distance P1 and P2 = " + distanceP1P2 );
+println ( " The distance P2 and P3 = " + distanceP2P3 );
+println ( " The distance P3 and P1 = " + distanceP3P1 );
+
+if ( distanceP1P2 < distanceP2P3 ) {
+	shortestDistance = distanceP1P2;
+	if ( distanceP3P1 < shortestDistance ) {
+			shortestDistance = distanceP3P1;
+			println ( " P1 and P3 are closest ");
+			} else {
+			println ( " P1 and P2 are closet ");
+			}
+		
+
+} else {
+	shortestDistance = distanceP2P3;
+	if ( distanceP3P1 < shortestDistance ) {
+				shortestDistance = distanceP3P1;
+				println ( " P1 and P3 are closest ");
+				} else {
+				println ( " P2 and P3 are closet ");
+			}
+}
+
+
+double calculateDistance ( Point a, Point b) {
+double result = Math.sqrt( (a.x - b.x)*(a.x - b.x) + (a.y - b.y)*(a.y - b.y) );
+return result;
+}
+	
+class Point {
+	double x;
+	double y;
+}
+
+class Rectangle {
+	Point upLeft;
+	Point downRight;
+}

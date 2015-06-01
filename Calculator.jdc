@@ -1,0 +1,8 @@
+Calculator1 C = new Calculator1 ();
+println ( " Please enter first integer ");
+String s1 = readLine();
+C.x = Integer.parseInt(s1);
+println ( " Please enter second integer ");
+String s2 = readLine();
+C.y = Integer.parseInt(s2);
+println ( C.add(C.x,C.y));

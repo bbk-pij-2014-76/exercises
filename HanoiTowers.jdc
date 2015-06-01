@@ -1,0 +1,11 @@
+println ( " Please enter a number of discs to move ");
+String s = readLine();
+int n = Integer.parseInt (s);
+
+int hanoi ( int n )
+	if ( n == 1 ) {
+		return 1;
+	} else if (n>=2)  {
+		return hanoi(n-1) + 1 + hanoi(n-1);
+	}
+}

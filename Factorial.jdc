@@ -1,0 +1,12 @@
+println ( " Please enter a number ");
+String s = readLine();
+int num = Integer.parseInt (s);
+println (fac(num));
+
+int fac ( int n ) {
+	if  (n == 1 || n == 0) {
+		return 1;
+	} else {
+	return n*fac(n-1);
+	}
+}

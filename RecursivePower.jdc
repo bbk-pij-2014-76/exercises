@@ -1,0 +1,16 @@
+println ( " Please enter an integer ");
+String s = readLine();
+int n = Integer.parseInt (s);
+println ( " Please enter a power ");
+String s1 = readLine();
+int m = Integer.parseInt (s1);
+
+println ( power(n,m));
+
+int power ( int n , int m ) {
+	if ( m == 2 ) {
+		return n*n;
+	} else {
+		return n*power(n,m-1);
+	}
+}
